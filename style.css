@@ -1,254 +1,254 @@
 body{
-	margin: 0; padding: 0;
-	color: #a1a1a1;
-	background-color: #0f1213;
-	font-family: 'Roboto', sans-serif;
-	font-size: 8vh;
-	/*font-weight: 300;*/
-	user-select: none;
+    margin: 0; padding: 0;
+    color: #a1a1a1;
+    background-color: #0f1213;
+    font-family: 'Roboto', sans-serif;
+    font-size: 8vh;
+    /*font-weight: 300;*/
+    user-select: none;
 }
 
 a, a:visited{ color: #a1a1a1 }
 
 #box{
-	position: relative;
-	background-color: #0f1213;
-	width: 150vh; /* 3:2 ratio */
-	height: 100vh; /* 3:2 ratio */
-	margin: 0 auto;
+    position: relative;
+    background-color: #0f1213;
+    width: 150vh; /* 3:2 ratio */
+    height: 100vh; /* 3:2 ratio */
+    margin: 0 auto;
 }
 
 #box > div {
-	background-color: #2a2a2a;
-	position: relative;
-	overflow: hidden;
+    background-color: #2a2a2a;
+    position: relative;
+    overflow: hidden;
 }
 
 #value{
-	float: left;
-	width: 55%;
-	height: 25%;
-	margin: 4vh 0 0 4vh;
+    float: left;
+    width: 55%;
+    height: 25%;
+    margin: 4vh 0 0 4vh;
 }
 
 #dashValue{
-	float: right;
-	width: 38.5%;
-	height: 25%;
-	margin: 4vh 4vh 0 0;
+    float: right;
+    width: 38.5%;
+    height: 25%;
+    margin: 4vh 4vh 0 0;
 }
 
 #header1{
-	float: left;
-	width: 65%;
-	height: 6%;
-	margin: 2vh 0 0 4vh;
-	font-size: 50%;
+    float: left;
+    width: 65%;
+    height: 6%;
+    margin: 2vh 0 0 4vh;
+    font-size: 50%;
 }
 
 #header2{
-	float: right;
-	width: 28.5%;
-	height: 6%;
-	margin: 2vh 4vh 0 0;
-	font-size: 50%;
+    float: right;
+    width: 28.5%;
+    height: 6%;
+    margin: 2vh 4vh 0 0;
+    font-size: 50%;
 }
 
 #fiatMonth{
-	float: left;
-	width: 31.84%;
-	height: 15%;
-	margin: 2vh 0 0 4vh;
+    float: left;
+    width: 31.84%;
+    height: 15%;
+    margin: 2vh 0 0 4vh;
 }
 
 #dashMonth{
-	float: left;
-	width: 31.84%;
-	height: 15%;
-	margin: 2vh 0 0 2vh;
+    float: left;
+    width: 31.84%;
+    height: 15%;
+    margin: 2vh 0 0 2vh;
 }
 
 #interest{
-	float: right;
-	width: 28.5%;
-	height: 15%;
-	margin: 2vh 4vh 0 0;
+    float: right;
+    width: 28.5%;
+    height: 15%;
+    margin: 2vh 4vh 0 0;
 }
 
 #fiatDay{
-	float: left;
-	width: 31.84%;
-	height: 15%;
-	margin: 2vh 0 0 4vh;
+    float: left;
+    width: 31.84%;
+    height: 15%;
+    margin: 2vh 0 0 4vh;
 }
 
 #dashDay{
-	float: left;
-	width: 31.84%;
-	height: 15%;
-	margin: 2vh 0 0 2vh;
+    float: left;
+    width: 31.84%;
+    height: 15%;
+    margin: 2vh 0 0 2vh;
 }
 
 #header4{
-	float: right;
-	width: 28.5%;
-	height: 6%;
-	margin: 2vh 4vh 0 0;
-	font-size: 50%;
+    float: right;
+    width: 28.5%;
+    height: 6%;
+    margin: 2vh 4vh 0 0;
+    font-size: 50%;
 }
 
 #shareMn{
-	float: right;
-	width: 28.5%;
-	height: 15%;
-	margin: 2vh 4vh 0 0;
+    float: right;
+    width: 28.5%;
+    height: 15%;
+    margin: 2vh 4vh 0 0;
 }
 
 #header3{
-	float: left;
-	width: 65%;
-	height: 6%;
-	margin: 2vh 0 0 4vh;
-	font-size: 50%;
+    float: left;
+    width: 65%;
+    height: 6%;
+    margin: 2vh 0 0 4vh;
+    font-size: 50%;
 }
 
 #bottomLeft{
-	float: left;
-	width: 43.6%;
-	height: 15%;
-	margin: 2vh 0 0 4vh;
+    float: left;
+    width: 43.6%;
+    height: 15%;
+    margin: 2vh 0 0 4vh;
 }
 
 #bottomLeft #fiatDash{
-	display: inline-block !important;
-	float: left;
-	width: 43%;
+    display: inline-block !important;
+    float: left;
+    width: 43%;
 }
 
 #bottomLeft #trenner{
-	display: inline-block !important;
-	float: left;
-	width: 1%;
-	height: 12vh;
-	margin-top: 1.3vh;
-	background-color: #161616;
+    display: inline-block !important;
+    float: left;
+    width: 1%;
+    height: 12vh;
+    margin-top: 1.3vh;
+    background-color: #161616;
 }
 
 #bottomLeft #btcDash{
-	width: 52%;
-	display: inline-block !important;
+    width: 52%;
+    display: inline-block !important;
 }
 
 #fiatBTC{
-	float: left;
-	width: 20%;
-	height: 15%;
-	margin: 2vh 0 0 2vh;
+    float: left;
+    width: 20%;
+    height: 15%;
+    margin: 2vh 0 0 2vh;
 }
 
 #shareSupply{
-	float: right;
-	width: 28.5%;
-	height: 15%;
-	margin: 2vh 4vh 0 0;
+    float: right;
+    width: 28.5%;
+    height: 15%;
+    margin: 2vh 4vh 0 0;
 }
 
 .o{font-size: 50%}
 
 #value .v, #dashValue .v{
-	font-size: 150%;
-	margin-top: 2vh;
+    font-size: 150%;
+    margin-top: 2vh;
 }
 
 #value .o, #dashValue .o{
-	font-size: 65%;
-	margin: -0.4em 0 0 5.5vh;
+    font-size: 65%;
+    margin: -0.4em 0 0 5.5vh;
 }
 
 div.v{
-	margin-left: 4vh;
+    margin-left: 4vh;
 }
 
 div.o{
-	margin-left: 5vh;
-	margin-top: -0.3em;
-	color: #777;
+    margin-left: 5vh;
+    margin-top: -0.3em;
+    color: #777;
 }
 
 #header1, #header2, #header3, #header4{ font-size: 42% }
 
 #header1 > div, #header2 > div, #header3 > div, #header4 > div{
-	margin: 0.7%;
-	background-color: #161616;
-	height: 78%;
-	padding: 0 3vh 0 4vh;
+    margin: 0.7%;
+    background-color: #161616;
+    height: 78%;
+    padding: 0 3vh 0 4vh;
 }
 
 #header2 > div, #header4 > div{
-	margin: 1.6%;
+    margin: 1.6%;
 }
 
 #header1 > div > span.right{
-	float: right;
-	color: #777;
+    float: right;
+    color: #777;
 }
 
 #update_bar{
-	position: absolute;
-	z-index: 1000;
-	background-color: #a1a1a1;
-	height: 4px;
-	-webkit-animation: progress 60s linear infinite;
-	animation: progress 60s linear infinite;
+    position: absolute;
+    z-index: 1000;
+    background-color: #a1a1a1;
+    height: 4px;
+    -webkit-animation: progress 60s linear infinite;
+    animation: progress 60s linear infinite;
 }
 
 div#loading{
-	display: none;
-	z-index: 1001;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
+    display: none;
+    z-index: 1001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
 }
 
 div#loading img{
-	position: relative;
-	width: 4em;
-	height: 4em;
-	margin-left: -2em;
-	margin-top: -2em;
-	left: 50%;
-	top: 50%;
+    position: relative;
+    width: 4em;
+    height: 4em;
+    margin-left: -2em;
+    margin-top: -2em;
+    left: 50%;
+    top: 50%;
 }
 
 #help{
-	display: none;
-	position: absolute !important;
-	background-color: #0f1213 !important;
-	color: #747474;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 3% 10% 3% 10%;
-	font-size: 27%;
-	font-family: Arial, sans-serif;
-	user-select: text;
+    display: none;
+    position: absolute !important;
+    background-color: #0f1213 !important;
+    color: #747474;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3% 10% 3% 10%;
+    font-size: 27%;
+    font-family: Arial, sans-serif;
+    user-select: text;
 }
 
 h3{ margin-top: 5% }
 
 .url_bar{
-	display: block;
-	font-size: 75%;
-	border: 1px solid #0f1213;
-	background-color: #C3C3C3;
-	color: #0E0E0E;
-	width: 98.4%;
-	padding: 0.8%;
-	margin-bottom: 2%;
+    display: block;
+    font-size: 75%;
+    border: 1px solid #0f1213;
+    background-color: #C3C3C3;
+    color: #0E0E0E;
+    width: 98.4%;
+    padding: 0.8%;
+    margin-bottom: 2%;
 }
 
 hr{ border: none; background-color: #747474; height: 0.3%; margin-top: 4%; }
@@ -258,36 +258,36 @@ hr{ border: none; background-color: #747474; height: 0.3%; margin-top: 4%; }
 
 @media (max-aspect-ratio: 3/2) {
 
-	#box{
-		width: 100vw;
-		height: 66.666vw;
-	}
+    #box{
+        width: 100vw;
+        height: 66.666vw;
+    }
 
-	body{font-size: 5.328vw}
+    body{font-size: 5.328vw}
 
-	#value{margin: 2.664vw 0 0 2.664vw}
-	#dashValue{margin: 2.664vw 2.664vw 0 0}
-	#header1{margin: 1.334vw 0 0 2.664vw}
-	#header2{margin: 1.334vw 2.664vw 0 0}
-	#fiatMonth{margin: 1.334vw 0 0 2.664vw}
-	#dashMonth{margin: 1.334vw 0 0 1.334vw}
-	#interest{margin: 1.334vw 2.664vw 0 0}
-	#fiatDay{margin: 1.334vw 0 0 2.664vw}
-	#dashDay{margin: 1.334vw 0 0 1.334vw}
-	#header4{margin: 1.334vw 2.664vw 0 0}
-	#shareMn{margin: 1.332vw 2.664vw 0 0}
-	#header3{margin: 1.332vw 0 0 2.664vw}
-	#bottomLeft{margin: 1.332vw 0 0 2.664vw}
-	#fiatBTC{margin: 1.332vw 0 0 1.332vw}
-	#shareSupply{margin: 1.332vw 2.664vw 0 0}
-	#header1 > div, #header2 > div, #header3 > div, #header4 > div{
-	padding: 0 1.998vw 0 2.664vw}
-	div.o{margin-left: 3.33vw}
-	div.v{margin-left: 2.664vw}
-	#value .v, #dashValue .v{margin-top: 1.332vw}
-	#value .o, #dashValue .o{margin-left: 3.663vw;}
-	#bottomLeft #trenner{
-	height: 7.992vw; margin-top: 0.866vw}
+    #value{margin: 2.664vw 0 0 2.664vw}
+    #dashValue{margin: 2.664vw 2.664vw 0 0}
+    #header1{margin: 1.334vw 0 0 2.664vw}
+    #header2{margin: 1.334vw 2.664vw 0 0}
+    #fiatMonth{margin: 1.334vw 0 0 2.664vw}
+    #dashMonth{margin: 1.334vw 0 0 1.334vw}
+    #interest{margin: 1.334vw 2.664vw 0 0}
+    #fiatDay{margin: 1.334vw 0 0 2.664vw}
+    #dashDay{margin: 1.334vw 0 0 1.334vw}
+    #header4{margin: 1.334vw 2.664vw 0 0}
+    #shareMn{margin: 1.332vw 2.664vw 0 0}
+    #header3{margin: 1.332vw 0 0 2.664vw}
+    #bottomLeft{margin: 1.332vw 0 0 2.664vw}
+    #fiatBTC{margin: 1.332vw 0 0 1.332vw}
+    #shareSupply{margin: 1.332vw 2.664vw 0 0}
+    #header1 > div, #header2 > div, #header3 > div, #header4 > div{
+    padding: 0 1.998vw 0 2.664vw}
+    div.o{margin-left: 3.33vw}
+    div.v{margin-left: 2.664vw}
+    #value .v, #dashValue .v{margin-top: 1.332vw}
+    #value .o, #dashValue .o{margin-left: 3.663vw;}
+    #bottomLeft #trenner{
+    height: 7.992vw; margin-top: 0.866vw}
 }
 
 @-webkit-keyframes progress {
