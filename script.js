@@ -44,6 +44,8 @@
         return fmtCurr(input, 2);
     }
 
+    var DOWN=0, UP=1;
+
     // dashtv object definition
     var DTV = (function(endpoint){
 
@@ -61,7 +63,7 @@
             // initial state
             data: {
                 polling: 0,
-                connerr: 0,
+                connstate: {"last": UP, "now": UP},
                 dash: 1000,
                 curr: "USD",
                 addr: null,
@@ -103,11 +105,23 @@
                 this.pollDashData(self);
 
                 // set polling timers
-                this.timers['netdata'] = setInterval( function(){ self.pollDashData(self)}, 60 * 1000);  // once per minute
-                this.timers['userdata'] = setInterval( function(){ self.pollUserData(self)}, 60 * 60 * 1000);  // once per hour
+                this.setTimer('netdata', function(){ self.pollDashData(self)}, 60 * 1000);  // once per minute
+                this.setTimer('userdata', function(){ self.pollUserData(self)}, 60 * 60 * 1000);  // once per hour
 
                 // pull any needed data and refresh page
                 this.reload();
+            },
+            connState: function(label,state) {
+                if (state != undefined ) { this.data.connstate[label] = state; }
+                return this.data.connstate[label];
+            },
+            setTimer: function(id, f, interval) {
+                if (this.timers[id] != undefined) {
+                    clearInterval(this.timers[id]);
+                    this.timers[id] = null;
+                }
+                this.timers[id] = setInterval(f,interval);
+                return;
             },
 
             // update object with latest dash data
@@ -121,8 +135,8 @@
                             self.data.rate = result[self.data.curr];
                         }
                     })
-                    .done(function() { self.data.connerr = 0; })
-                    .fail(function(jqXHR, textStatus, errorThrown) { self.data.connerr = 1; })
+                    .done(function() { self.connState('now', UP); })
+                    .fail(function(jqXHR, textStatus, errorThrown) { self.connState('now', DOWN); })
                     .always(function() { self.data.polling -= 1; });
                 }
                 else {
@@ -137,8 +151,8 @@
                         };
                     };
                 })
-                .done(function() { self.data.connerr = 0; })
-                .fail(function(jqXHR, textStatus, errorThrown) { self.data.connerr = 1; })
+                .done(function() { self.connState('now', UP); })
+                .fail(function(jqXHR, textStatus, errorThrown) { self.connState('now', DOWN); })
                 .always(function() { self.data.polling -= 1; self.redraw(); });
             },
 
@@ -239,12 +253,20 @@
             redraw: function(){
                 var s = this.selectors;
 
-                if (this.data.connerr){
-                    s.body.addClass("err");
-                    s.update_bar.removeClass("hidden");
-                }
-                else {
-                    s.body.removeClass("err");
+                if (this.connState('now') != this.connState('last')) {
+                    this.connState('last', this.connState('now'));
+                    if (this.connState('now') == UP){
+                        s.body.removeClass("err");
+                        var self = this;
+                        this.setTimer('netdata', function(){ self.pollDashData(self)}, 60 * 1000);
+                    }
+                    else {
+                        s.body.addClass("err");
+                        s.update_bar.removeClass("hidden");
+                        // reference for callbacks
+                        var self = this;
+                        this.setTimer('netdata', function(){ self.pollDashData(self)}, 15 * 1000);
+                    }
                 }
 
                 // defer redraw if still polling
