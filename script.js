@@ -86,8 +86,8 @@
                 // cache jquery selectors
                 this.cacheSelectors();
 
-				// keyboard & mouse inputs
-				this.hwInputs();
+                // keyboard & mouse inputs
+                this.hwInputs();
 
                 // parse url for input
                 this.parseUrl();
@@ -196,40 +196,40 @@
                 s.value_shareMn     = $("#shareMn>div.v");
                 s.value_shareSupply = $("#shareSupply>div.v");
                 s.value_interest    = $("#interest>div.v");
-				s.update_bar		= $("#update_bar");
+                s.update_bar        = $("#update_bar");
 
             },
 
-			hwInputs: function(){
-				var s   = this.selectors;
+            hwInputs: function(){
+                var s   = this.selectors;
 
-				$(document).keydown(function(key){
-					switch(key.which){
-						//'P' update-bar
-						case 80:
-							if( s.update_bar	.css("visibility")==="hidden"){
-								s.update_bar 	.css("visibility", "visible");
-							}else{
-								s.update_bar	.css("visibility", "hidden");
-							}
-							break;
-						//'T' theme
-						case 84:
-							$("body").toggleClass("light");
-							break;
-						//'H' help
-						case 72:
-							$("#help").toggle();
-							break;
-					}
+                $(document).keydown(function(key){
+                    switch(key.which){
+                        //'P' update-bar
+                        case 80:
+                            if( s.update_bar    .css("visibility")==="hidden"){
+                                s.update_bar     .css("visibility", "visible");
+                            }else{
+                                s.update_bar    .css("visibility", "hidden");
+                            }
+                            break;
+                        //'T' theme
+                        case 84:
+                            $("body").toggleClass("light");
+                            break;
+                        //'H' help
+                        case 72:
+                            $("#help").toggle();
+                            break;
+                    }
 
-				});
+                });
 
-				$(".t").click(function (e) {
-    					e.stopPropagation();
-    					jQuery(this).children(this).toggle();
-				});
-			},
+                $(".t").click(function (e) {
+                        e.stopPropagation();
+                        jQuery(this).children(this).toggle();
+                });
+            },
 
             // renders page
             redraw: function(){
