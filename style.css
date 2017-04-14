@@ -202,6 +202,18 @@ div.o{
     animation: progress 60s linear infinite;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
+body.err #update_bar{
+    background-color: #f40;
+    width: 100%;
+    height: 8px;
+    -webkit-animation: pulse 2s linear infinite alternate;
+    animation: pulse 2s linear infinite alternate;
+}
+
 div#loading{
     display: none;
     z-index: 1001;
@@ -288,6 +300,16 @@ hr{ border: none; background-color: #747474; height: 0.3%; margin-top: 4%; }
     #value .o, #dashValue .o{margin-left: 3.663vw;}
     #bottomLeft #trenner{
     height: 7.992vw; margin-top: 0.866vw}
+}
+
+@-webkit-keyframes pulse {
+    from { opacity: 0.0 }
+    to { opacity: 1.0 }
+}
+
+@keyframes pulse {
+    from { opacity: 0.0 }
+    to { opacity: 1.0 }
 }
 
 @-webkit-keyframes progress {

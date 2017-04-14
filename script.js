@@ -55,9 +55,13 @@
             // jquery selector cache
             selectors: {},
 
+            // polling timers
+            timers: {},
+
             // initial state
             data: {
                 polling: 0,
+                connerr: 0,
                 dash: 1000,
                 curr: "USD",
                 addr: null,
@@ -99,8 +103,8 @@
                 this.pollDashData(self);
 
                 // set polling timers
-                setInterval( function(){ self.pollDashData(self)}, 60 * 1000);  // once per minute
-                setInterval( function(){ self.pollUserData(self)}, 60 * 60 * 1000);  // once per hour
+                this.timers['netdata'] = setInterval( function(){ self.pollDashData(self)}, 60 * 1000);  // once per minute
+                this.timers['userdata'] = setInterval( function(){ self.pollUserData(self)}, 60 * 60 * 1000);  // once per hour
 
                 // pull any needed data and refresh page
                 this.reload();
@@ -112,12 +116,14 @@
 
                 if(self.data.curr != "USD"){
                     self.data.polling += 1;
-                    $.getJSON(this.endpoint + "curr.json", function(result){
+                    $.getJSON(self.endpoint + "curr.json", function(result){
                         if(typeof result[self.data.curr] != "undefined"){
                             self.data.rate = result[self.data.curr];
                         }
-                        self.data.polling -= 1;
-                    });
+                    })
+                    .done(function() { self.data.connerr = 0; })
+                    .fail(function(jqXHR, textStatus, errorThrown) { self.data.connerr = 1; })
+                    .always(function() { self.data.polling -= 1; });
                 }
                 else {
                     self.data.rate = 1;
@@ -129,10 +135,11 @@
                         for ( key in result ) {
                             self.data[key] = result[key];
                         };
-                        self.redraw();
                     };
-                    self.data.polling -= 1;
-                });
+                })
+                .done(function() { self.data.connerr = 0; })
+                .fail(function(jqXHR, textStatus, errorThrown) { self.data.connerr = 1; })
+                .always(function() { self.data.polling -= 1; self.redraw(); });
             },
 
             // update object with latest user balance
@@ -197,25 +204,22 @@
                 s.value_shareSupply = $("#shareSupply>div.v");
                 s.value_interest    = $("#interest>div.v");
                 s.update_bar        = $("#update_bar");
+                s.body              = $("body");
 
             },
 
             hwInputs: function(){
-                var s   = this.selectors;
+                var s = this.selectors;
 
                 $(document).keydown(function(key){
                     switch(key.which){
                         //'P' update-bar
                         case 80:
-                            if( s.update_bar    .css("visibility")==="hidden"){
-                                s.update_bar     .css("visibility", "visible");
-                            }else{
-                                s.update_bar    .css("visibility", "hidden");
-                            }
+                            s.body.hasClass('err') || s.update_bar.toggleClass("hidden");
                             break;
                         //'T' theme
                         case 84:
-                            $("body").toggleClass("light");
+                            s.body.toggleClass("light");
                             break;
                         //'H' help
                         case 72:
@@ -233,6 +237,15 @@
 
             // renders page
             redraw: function(){
+                var s = this.selectors;
+
+                if (this.data.connerr){
+                    s.body.addClass("err");
+                    s.update_bar.removeClass("hidden");
+                }
+                else {
+                    s.body.removeClass("err");
+                }
 
                 // defer redraw if still polling
                 if (this.data.polling){
