@@ -335,7 +335,7 @@
     // attach DTV object to window scope
     scope.dashtv = DTV;
 
-})(this, 'http://192.168.1.5/dashtv/');
+})(this, 'https://dash-news.de/dashtv/');
 
 
 // invoke dashtv.init() on page load
