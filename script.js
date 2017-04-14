@@ -85,8 +85,8 @@
 
                 // cache jquery selectors
                 this.cacheSelectors();
-				
-				// keyboard & mouse inputs				
+
+				// keyboard & mouse inputs
 				this.hwInputs();
 
                 // parse url for input
@@ -199,20 +199,20 @@
 				s.update_bar		= $("#update_bar");
 
             },
-			
+
 			hwInputs: function(){
 				var s   = this.selectors;
-				
+
 				$(document).keydown(function(key){
 					switch(key.which){
 						//'P' update-bar
 						case 80:
 							if( s.update_bar	.css("visibility")==="hidden"){
-								s.update_bar 	.css("visibility", "visible");	
+								s.update_bar 	.css("visibility", "visible");
 							}else{
-								s.update_bar	.css("visibility", "hidden");		
+								s.update_bar	.css("visibility", "hidden");
 							}
-							break;					
+							break;
 						//'T' theme
 						case 84:
 							$("body").toggleClass("light");
@@ -221,10 +221,10 @@
 						case 72:
 							$("#help").toggle();
 							break;
-					}			
-					
-				});		
-				
+					}
+
+				});
+
 				$(".t").click(function (e) {
     					e.stopPropagation();
     					jQuery(this).children(this).toggle();
@@ -261,7 +261,7 @@
 
                 // populate currency labels
                 s.currency_labels   .html(data.curr)
-                
+
                 // populate values
                 s.value_main        .html(fmt.value      );
                 s.value_fiatMonth   .html(fmt.fiatMonth  );
