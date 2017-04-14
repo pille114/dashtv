@@ -1,4 +1,4 @@
-/*! 
+/*!
  * numeral.js language configuration
  * language : belgium-dutch (be-nl)
  * author : Dieter Luypaert : https://github.com/moeriki
@@ -66,7 +66,7 @@
         this.numeral.language('nl', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : simplified chinese
  * author : badplum : https://github.com/badplum
@@ -136,7 +136,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : danish denmark (dk)
  * author : Michael Storgaard : https://github.com/mstorgaard
@@ -170,11 +170,11 @@
         this.numeral.language('da-dk', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : German in Switzerland (de-ch)
  * author : Michael Piefel : https://github.com/piefel (based on work from Marco Krage : https://github.com/sinky)
- */ 
+ */
 (function () {
     var language = {
         delimiters: {
@@ -204,7 +204,7 @@
         this.numeral.language('de-ch', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : German (de) – generally useful in Germany, Austria, Luxembourg, Belgium
  * author : Marco Krage : https://github.com/sinky
@@ -238,7 +238,7 @@
         this.numeral.language('de', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : english united kingdom (uk)
  * author : Dan Ristic : https://github.com/dristic
@@ -276,7 +276,7 @@
         this.numeral.language('en-gb', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : spanish Spain
  * author : Hernan Garcia : https://github.com/hgarcia
@@ -316,7 +316,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : spanish
  * author : Hernan Garcia : https://github.com/hgarcia
@@ -337,7 +337,7 @@
             var b = number % 10;
             return (b === 1 || b === 3) ? 'er' :
                 (b === 2) ? 'do' :
-                (b === 7 || b === 0) ? 'mo' : 
+                (b === 7 || b === 0) ? 'mo' :
 		(b === 8) ? 'vo' :
 		(b === 9) ? 'no' : 'to';
         },
@@ -356,7 +356,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : Estonian
  * author : Illimar Tambek : https://github.com/ragulka
@@ -394,7 +394,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : Finnish
  * author : Sami Saada : https://github.com/samitheberber
@@ -463,7 +463,7 @@
         this.numeral.language('fr-CA', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : french (fr-ch)
  * author : Adam Draper : https://github.com/adamwdraper
@@ -498,7 +498,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : french (fr)
  * author : Adam Draper : https://github.com/adamwdraper
@@ -566,7 +566,7 @@
         this.numeral.language('hu', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : italian Italy (it)
  * author : Giacomo Trombi : http://cinquepunti.it
@@ -600,7 +600,7 @@
         this.numeral.language('it', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : japanese
  * author : teppeis : https://github.com/teppeis
@@ -635,7 +635,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : netherlands-dutch (nl-nl)
  * author : Dave Clayton : https://github.com/davedx
@@ -670,7 +670,7 @@
         this.numeral.language('nl-nl', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : polish (pl)
  * author : Dominik Bulaj : https://github.com/dominikbulaj
@@ -704,7 +704,7 @@
         this.numeral.language('pl', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : portuguese brazil (pt-br)
  * author : Ramiro Varandas Jr : https://github.com/ramirovjr
@@ -738,7 +738,7 @@
         this.numeral.language('pt-br', language);
     }
 }());
-/*! 
+/*!
  * numeral.js language configuration
  * language : portuguese (pt-pt)
  * author : Diogo Resende : https://github.com/dresende
@@ -789,10 +789,10 @@
             trillion: 't'
         },
         ordinal: function () {
-            // not ideal, but since in Russian it can taken on 
+            // not ideal, but since in Russian it can taken on
             // different forms (masculine, feminine, neuter)
             // this is all we can do
-            return '.'; 
+            return '.';
         },
         currency: {
             symbol: '\u20B4'
@@ -809,7 +809,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : russian (ru)
  * author : Anatoli Papirovski : https://github.com/apapirovski
@@ -827,10 +827,10 @@
             trillion: 't'
         },
         ordinal: function () {
-            // not ideal, but since in Russian it can taken on 
+            // not ideal, but since in Russian it can taken on
             // different forms (masculine, feminine, neuter)
             // this is all we can do
-            return '.'; 
+            return '.';
         },
         currency: {
             symbol: 'руб.'
@@ -882,7 +882,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : thai (th)
  * author : Sathit Jittanupat : https://github.com/jojosati
@@ -917,7 +917,7 @@
     }
 }());
 
-/*! 
+/*!
  * numeral.js language configuration
  * language : turkish (tr)
  * author : Ecmel Ercan : https://github.com/ecmel, Erhan Gundogan : https://github.com/erhangundogan, Burak Yiğit Kaya: https://github.com/BYK
@@ -1001,10 +1001,10 @@
             trillion: 'блн'
         },
         ordinal: function () {
-            // not ideal, but since in Ukrainian it can taken on 
+            // not ideal, but since in Ukrainian it can taken on
             // different forms (masculine, feminine, neuter)
             // this is all we can do
-            return ''; 
+            return '';
         },
         currency: {
             symbol: '\u20B4'
