@@ -219,6 +219,7 @@
                 s.value_interest    = $("#interest>div.v");
                 s.update_bar        = $("#update_bar");
                 s.body              = $("body");
+                s.box               = $("div#box");
 
             },
 
@@ -257,11 +258,13 @@
                     this.connState('last', this.connState('now'));
                     if (this.connState('now') == UP){
                         s.body.removeClass("err");
+                        s.box.attr('title','');
                         var self = this;
                         this.setTimer('netdata', function(){ self.pollDashData(self)}, 60 * 1000);
                     }
                     else {
                         s.body.addClass("err");
+                        s.box.attr('title','connection timeout - retrying...');
                         s.update_bar.removeClass("hidden");
                         // reference for callbacks
                         var self = this;
